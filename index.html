@@ -1,1 +1,39 @@
-<h1>Hello World!!</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<title>啊这</title>
+	<link rel="icon" type="image/x-icon" href="res/favicon.ico">
+	<style>
+		html {
+			color-scheme: light dark;
+		}
+
+		body {
+			width: 35em;
+			margin: 0 auto;
+			font-family: Tahoma, Verdana, Arial, sans-serif;
+		}
+	</style>
+	<script>
+		var search = new URL(location.href).search;
+		var equal = search.indexOf('=');
+		if (equal > -1) {
+			search.substring(0, equal) == '?Hls' &&
+				location.replace(location.origin + '/hls/?video' + search.substring(equal));
+		}
+	</script>
+</head>
+
+<body>
+	<h1>欢迎来到 hyx3179 的小站!</h1><br><br><br>
+	<form>
+		<label for="Hls">使用 <a href="https://github.com/video-dev/hls.js/">Hls</a> 播放网络视频</label><br><br>
+		<input type="text" id="Hls" name="Hls"><input type="submit" value="Play"><br>
+	</form><br><br>
+	<a href="https://taopianzy.com/home/index.html">淘片资源网</a> 有其他资源站欢迎在 issues 提交
+
+</body>
+
+</html>
